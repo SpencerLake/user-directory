@@ -1,6 +1,26 @@
+import React from 'react'
+import axios from 'axios'
 import './styles/display.css'
+import people from './People.js'
+import { useState, useEffect } from "react";
+
 
 function Display() {
+    const [id, setId] = useState(0)
+
+
+    const data = [people];
+
+    const inc = () => {
+        setId((prevId) => prevId + 1)
+
+        console.log(id)
+    }
+
+    
+    
+
+
     return(
     <div className="girth">
         <div className="display">
@@ -29,6 +49,7 @@ function Display() {
                         <li className="ordered-list">Strange Magic</li>
                         <li className="ordered-list">Martian Child</li>
                     </ol>
+                    {/* < People /> */}
             </div>
         </div>
         <div className="buttons">
